@@ -1,15 +1,5 @@
----
-sidebar: auto
----
+# Contact
 
-# Config
-
-## foo
-
-- Type: `string`
-- Default: `/`
-
-## bar
-
-- Type: `string`
-- Default: `/`
+<ClientOnly>
+  <ContactForm/>
+</ClientOnly>
