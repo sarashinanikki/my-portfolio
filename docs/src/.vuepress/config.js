@@ -4,7 +4,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Vuepress Docs Boilerplate',
+  title: 'Natsuki YOKOTA',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -34,22 +34,23 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
-        text: 'Guide',
-        link: '/guide/',
+        text: 'About',
+        link: '/about/',
       },
       {
-        text: 'Config',
-        link: '/config/'
+        text: 'Contact',
+        link: '/contact/'
       },
       {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
+        text: 'GitHub',
+        link: 'https://github.com/sarashinanikki'
       }
     ],
+    /*
     sidebar: {
-      '/guide/': [
+      '/about/': [
         {
-          title: 'Guide',
+          title: 'About',
           collapsable: false,
           children: [
             '',
@@ -58,6 +59,7 @@ module.exports = {
         }
       ],
     }
+    */
   },
 
   /**

@@ -1,15 +1,16 @@
 ---
 home: true
-heroImage: https://v1.vuepress.vuejs.org/hero.png
-tagline: 
-actionText: Quick Start →
+heroImage: /hero.drawio.png
+tagline: WEB Developer & WEB Designer
+actionText: About Me →
 actionLink: /guide/
+search: false
 features:
-- title: Feature 1 Title
-  details: Feature 1 Description
-- title: Feature 2 Title
-  details: Feature 2 Description
-- title: Feature 3 Title
-  details: Feature 3 Description
-footer: Made by  with ❤️
+- title: WEB Applications
+  details: Front-end, back-end and infrastructure, I have knowledge of WEB Application in whole layers.
+- title: Algorithm Specialist
+  details: A contestant of competitive programming contests. I can implement, and make a good use of algorithms.
+- title: Cloud Architect
+  details: Especially, I have much experience in Azure Service. Data & AI, WEB Apps, project management, IoT and so on.
+footer: Made by with Natsuki Yokota
 ---
