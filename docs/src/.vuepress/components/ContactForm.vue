@@ -1,5 +1,19 @@
 <template>
   <v-app>
+    <v-alert
+      v-model="successAlert"
+      dismissible
+      type="success"
+    >
+      メッセージの送信が完了しました
+    </v-alert>
+    <v-alert
+      v-model="errorAlert"
+      dismissible
+      type="error"
+    >
+      メッセージの送信に失敗しました
+    </v-alert>
     <v-form
       ref="form"
       v-model="valid"
@@ -33,11 +47,11 @@
       ></v-textarea>
 
       <v-btn
-        :disabled="!valid"
-        light="true"
         color="warning"
         block
-        @click="validate"
+        :disabled="!valid || loading"
+        :loading="loading"
+        @click="send"
       >
         Send
       </v-btn>
@@ -46,9 +60,18 @@
 </template>
 
 <script>
+  import axios from 'axios';
+  const client = axios.create({
+    baseURL: 'https://fb4wnrl507.execute-api.ap-northeast-1.amazonaws.com/',
+    headers: {'Accept': '*/*', 'Content-Type': 'application/json'}
+  });
+
   export default {
     data: () => ({
       valid: true,
+      loading: false,
+      successAlert: false,
+      errorAlert: false,
       name: '',
       nameRules: [
         v => !!v || 'Name is required',
@@ -67,8 +90,26 @@
     }),
 
     methods: {
-      validate () {
-        this.$refs.form.validate()
+      send () {
+        this.loading = true;
+        console.log(this.name);
+        console.log(this.email);
+        console.log(this.message);
+        client.post('/api/line', {
+            name: this.name,
+            email: this.email,
+            message: this.message
+          })
+          .then((res) => {
+            console.log('ok');
+            this.loading = false;
+            this.successAlert = true;
+          })
+          .catch((err) => {
+            console.error(err);
+            this.loading = false;
+            this.errorAlert = true;
+          })
       }
     },
   }

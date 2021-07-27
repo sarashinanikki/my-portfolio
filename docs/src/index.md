@@ -12,5 +12,5 @@ features:
   details: A contestant of competitive programming contests. Not only implementation, but also making a good use of algorithms.
 - title: Cloud Architect
   details: Especially, I have much experience in Azure Service. Data & AI, WEB Apps, project management, IoT and so on.
-footer: Made by with Natsuki Yokota
+footer: Made by Natsuki Yokota
 ---
