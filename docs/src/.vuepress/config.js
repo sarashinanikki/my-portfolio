@@ -4,7 +4,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Vuepress Docs Boilerplate',
+  title: 'Natsuki YOKOTA',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -18,7 +18,8 @@ module.exports = {
   head: [
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css' }]
   ],
 
   /**
@@ -27,6 +28,7 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
+    search: false,
     repo: '',
     editLinks: false,
     docsDir: '',
@@ -34,22 +36,23 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
-        text: 'Guide',
-        link: '/guide/',
+        text: 'About',
+        link: '/about/',
       },
       {
-        text: 'Config',
-        link: '/config/'
+        text: 'Contact',
+        link: '/contact/'
       },
       {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
+        text: 'GitHub',
+        link: 'https://github.com/sarashinanikki'
       }
     ],
+    /*
     sidebar: {
-      '/guide/': [
+      '/about/': [
         {
-          title: 'Guide',
+          title: 'About',
           collapsable: false,
           children: [
             '',
@@ -58,6 +61,7 @@ module.exports = {
         }
       ],
     }
+    */
   },
 
   /**

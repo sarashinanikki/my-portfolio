@@ -1,0 +1,5 @@
+# Contact
+
+<ClientOnly>
+  <ContactForm/>
+</ClientOnly>

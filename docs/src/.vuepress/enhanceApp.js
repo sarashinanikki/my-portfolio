@@ -1,3 +1,5 @@
+import Vuetify from "vuetify";
+import "vuetify/dist/vuetify.min.css"
 /**
  * Client app enhancement file.
  *
@@ -10,5 +12,6 @@ export default ({
   router, // the router instance for the app
   siteData // site metadata
 }) => {
-  // ...apply enhancements for the site.
+  Vue.use(Vuetify)
+  options.vuetify = new Vuetify({})
 }
